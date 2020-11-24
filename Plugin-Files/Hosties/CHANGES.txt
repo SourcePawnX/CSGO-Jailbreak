@@ -1,0 +1,101 @@
+---2020.05.03
+Added fist and knife support at the same time
+Fixed Multi-knife restore
+Fixed Error log spammers
+Fixed Russian translation
+
+---2020.05.01
+Added mp_solid_teammates 2 support
+Added knife if restore not found
+Added any weapon support to sm_hosties_t_start (fists too)
+Added any weapon support to sm_hosties_ct_start (fists too)
+Added fix block collision to knife fight
+Added fix block collision to chicken fight
+Added fix block collision to dodgeball
+Added Gun Toss no drop timer
+Added new debug logging (thanks to shanapu)
+Added Farthest Jump no jump timer
+Added 4 new translation
+Added pt_p translations
+Fixed Dodgeball block issues
+Fixed Restore error spam
+Fixed Respawn not dead players
+Fixed errors for respawn menu (Not in game)
+Removed the unfinished control module
+
+---2020.04.26
+Added feature to restore guns after LR
+Added Cvar - sm_hosties_lr_restoreweapon_t (Restore T weapons after LR)
+Added Cvar - sm_hosties_lr_restoreweapon_ct (Restore CT weapons after LR)
+Added new include to save and restore weapons
+Fixed TeamBlock glitches
+Fixed GraceTime finally
+Fixed NoBlock bug
+Changed GunToss winner deagle ammo set to 250
+
+---2020.04.25
+Added GunToss back (Fixed and works perfectly)
+Changed whole project to new syntax
+Fixed NoScope duplication
+Fixed 3rd party LR support
+Fixed GunToss weapon invisibility
+Fixed Rebel kill bug
+Fixed Dodgeball ghost bug
+Fixed 3rd party HP reset
+Fixed GunToss pickup for smaller distance
+Fixed GunToss random pickups
+Fixed GunToss weapon color disappears
+Fixed GunToss DataPack errors
+Fixed GunToss Ammo
+Fixed Translation
+Removed Cvar - sm_hosties_lr_gt_mode (needed to the perfect fix)
+
+---2020.04.24
+Added new Cvar (sm_hosties_chat_banner)
+Added ColorSupport from multicolors
+Added Option to change [SM] in chat
+Added a file for easier translations (translate_this.txt)
+Changed !rules menu to use more than one page
+Changed !rules menu to use exit button correctly
+Fixed T Mute on Startup bugs
+Fixed every text to use the custom set banner
+Fixed Hungarian translation
+Fixed Russian Translation
+Fixed Portuguese Translation
+Fixed Version
+Fixed Compatibility with JailbreakTeamBalance (?)
+
+
+---2020.04.23
+StripZeus checks for valid client
+DecideRebelsFate checks for valid client
+Rebel won't modify health back to 100
+
+---2020.04.22
+Added Hungarian translation (Thanks for tbence99)
+Updated French translation (Thanks for Yvano)
+Updated Russian Translation September
+Added Armor removal on LR start
+Added Health set on LR start
+Added Shield to weapon cleanup
+Added Healthshot to weapon cleanup
+Added Snowball to weapon cleanup
+Added Breachcharge to weapon cleanup
+Added Tagrenade to weapon cleanup
+Added Bumpmine to weapon cleanup
+Added HeavySuit to armor removal
+Added Dodgeball Anti-Pickup (AntiCheat)
+Added Race Anti-Pickup (AntiCheat)
+Added JumpContest Anti-Pickup (AntiCheat)
+Added mp_join_grace_time support to LR (Thanks for the report for Kubad)
+Fixed Datapack problems (Needs test)
+Fixed S4S and M4M Pistol Choice Checker
+Fixed S4S and M4M USP and HKP2000 bug
+Fixed LR Start Initializer
+Fixed LR CleanUp
+Fixed Jump Farthest
+Fixed Drugged Knife Fight (CSGO Version)
+Fixed Collision bug in some LR
+Fixed LR menu start bug (Thanks for the report for Kubad)
+Fixed RockPaperScissors bug after tie (Thanks for the report to Yvano)
+Deleted GunToss
