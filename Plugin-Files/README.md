@@ -2,7 +2,7 @@
 1. [Hosties](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Hosties)
 2. [Voice delay remover](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Voice-delay-remover)
 3. [Circle](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Circle)
-4. [CTSustum Tsustum Dsustum](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/CTsustum-Tsustum-Dsustum)
+4. [Chat games(https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Chat-games)
 5. [CT Kov](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/CT-kov)
 6. [Rebel Announce](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Rebel-announce)
 7. [LR Model Remover](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Lr-model-remover)
