@@ -8,3 +8,4 @@
 7. [LR Model Remover](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Lr-model-remover)
 8. [Smart Jail Door](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Smart-jail-door)
 9. [CT Menu](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/CT-Menu)
+10. [Warden Time](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Warden-Time)
