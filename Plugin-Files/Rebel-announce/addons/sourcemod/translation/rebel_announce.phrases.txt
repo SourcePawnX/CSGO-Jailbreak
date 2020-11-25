@@ -1,0 +1,8 @@
+"Phrases"
+{
+	"Rebel Announce"
+	{
+		"#format"		"{1:N}"
+		"en"		"→ Player {1} started a lebel ←"
+	}
+}

@@ -1,0 +1,8 @@
+"Phrases"
+{
+	"Rebel Announce"
+	{
+		"#format"		"{1:N}"
+		"tr"		"→ {1} adlı oyuncu isyan başlattı ←"
+	}
+}

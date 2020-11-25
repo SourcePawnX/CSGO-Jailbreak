@@ -4,3 +4,6 @@
 3. [Circle](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Circle)
 4. [CTSustum Tsustum Dsustum](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/CTsustum-Tsustum-Dsustum)
 5. [CT Kov](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/CT-kov)
+6. [Rebel Announce](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Rebel-announce)
+7. [LR Model Remover](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Lr-model-remover)
+8. [Smart Jail Door](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Smart-jail-door)

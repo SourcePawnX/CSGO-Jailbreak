@@ -1,0 +1,19 @@
+Add 'only open' mode setting for map.
+Add Lock/Unlock doors.
+Move map config to %sourcemod%/data folder.
+Remove cvars that used in CSGO from others game.
+Do global door's inputs hook (may be).
+Replace entity's indexes to entity's refs.
+Simplify use logic.
+Re-edit menu system.
+Add backlight in not CS:GO-engine games.
+Add prepared config for popular maps.
+Add dynamic array as buttons storage.
+Fix bug then button's ids have space between.
+Add MapMethod with statics
+Toggle for 'func_brush'
+Add config file for entity types and replace "if (StrEaual() || ...) " to StringMap arrays.
+Move buttons code to separate plugin.
+L 03/08/2016 - 04:48:11: [SM] Native "AcceptEntityInput" reported: Entity 789 (789) is not a CBaseEntity
+L 03/08/2016 - 04:48:11: [SM] Displaying call stack trace for plugin "smartjaildoors.smx":
+L 03/08/2016 - 04:48:11: [SM]   [0]  Line 155, smartjaildoors.sp::OnPluginEnd()
