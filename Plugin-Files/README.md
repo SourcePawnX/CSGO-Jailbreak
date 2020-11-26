@@ -1,4 +1,10 @@
-# Plugin List
+## GitZip
+- Use the link http://kinolien.github.io/gitzip/ to download the folder.
+- Paste the link of the folder in the red box in the picture.
+- Click the download button.
+![GitZip](https://i.imgur.com/N5mSxKd.png)
+
+## Plugin List
 1. [Hosties](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Hosties)
 2. [Voice delay remover](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Voice-delay-remover)
 3. [Circle](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Circle)
