@@ -10,7 +10,7 @@
 - Upload files into it.
 - Submit [PR](https://github.com/SourcePawnX/CSGO-Jailbreak/pulls).
 
-## Turkish
+## Türkçe
 - CS:GO Jailbreak sunucuları için eklentiler.
 
 ### [Wiki](https://github.com/SourcePawnX/CSGO-Jailbreak/wiki)
