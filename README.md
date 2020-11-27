@@ -1,5 +1,6 @@
 ## English
 - Plugins for CS:GO Jailbreak servers.
+- Test Server: 185.254.29.47
 
 ### Links
 - [Wiki](https://github.com/SourcePawnX/CSGO-Jailbreak/wiki)
@@ -8,6 +9,7 @@
 
 ## Türkçe
 - CS:GO Jailbreak sunucuları için eklentiler.
+- Test Sunucusu: 185.254.29.47
 
 ### Bağlantılar
 - [Rehber](https://github.com/SourcePawnX/CSGO-Jailbreak/wiki)
