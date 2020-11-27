@@ -1,4 +1,5 @@
 #include <sourcemod>
+#include <sdkhooks>
 #include <sdktools>
 #include <warden>
 #include <cstrike>
@@ -15,7 +16,7 @@ public Plugin myinfo =
 	name = "CTMenu", 
 	author = "ByDexter", 
 	description = "", 
-	version = "1.0", 
+	version = "1.1", 
 	url = "https://steamcommunity.com/id/ByDexterTR - ByDexter#5494"
 };
 
@@ -51,12 +52,12 @@ public Action Command_CTMenu(int client, int args)
 Menu Menu_CTMenu()
 {
 	Menu menu = new Menu(Menu_Callback);
-	menu.SetTitle("[SM] CTMenu");
+	menu.SetTitle("[SM] CTMenu\n ");
 	menu.AddItem("1", "→ Tüm ayarları sıfırla");
 	menu.AddItem("2", "→ CT Ölümsüzlük");
 	menu.AddItem("3", "→ Ayarlar");
 	menu.AddItem("4", "→ Oyunlar");
-	menu.AddItem("5", "→ Rev Menü");
+	menu.AddItem("5", "→ Rev Menü\n ");
 	menu.AddItem("6", "→ Kapat");
 	menu.ExitBackButton = false;
 	menu.ExitButton = false;
@@ -131,9 +132,9 @@ Menu Menu_Ayarlar()
 	else
 		menu2.AddItem("5", "→ Mahkûmları Durdur");
 	if (GetConVarInt(FindConVar("sv_gravity")) != 350)
-		menu2.AddItem("6", "→ Gravity Aç");
+		menu2.AddItem("6", "→ Gravity: Aç");
 	if (GetConVarInt(FindConVar("sv_gravity")) != 800)
-		menu2.AddItem("6", "→ Gravity Kapat");
+		menu2.AddItem("6", "→ Gravity: Kapat");
 	menu2.ExitBackButton = true;
 	menu2.ExitButton = false;
 	return menu2;
@@ -153,7 +154,7 @@ public int Menu2_Callback(Menu menu2, MenuAction action, int client, int positio
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu dost ateşi açtı!", client);
 				FFAyarla(true);
 			}
-			if (GetConVarInt(FindConVar("mp_teammates_are_enemies")) != 0)
+			else if (GetConVarInt(FindConVar("mp_teammates_are_enemies")) != 0)
 			{
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu dost ateşi kapattı!", client);
 				FFAyarla(false);
@@ -166,7 +167,7 @@ public int Menu2_Callback(Menu menu2, MenuAction action, int client, int positio
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu paraşütü açtı!", client);
 				SekmemeAyarla(true);
 			}
-			if (GetConVarInt(FindConVar("weapon_accuracy_nospread")) != 0)
+			else if (GetConVarInt(FindConVar("weapon_accuracy_nospread")) != 0)
 			{
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu sekmeme kapattı!", client);
 				SekmemeAyarla(false);
@@ -179,7 +180,7 @@ public int Menu2_Callback(Menu menu2, MenuAction action, int client, int positio
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu paraşütü açtı!", client);
 				SetCvar("sm_parachute_enabled", 1);
 			}
-			if (GetConVarInt(FindConVar("sm_parachute_enabled")) != 0)
+			else if (GetConVarInt(FindConVar("sm_parachute_enabled")) != 0)
 			{
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu paraşütü kapattı!", client);
 				SetCvar("sm_parachute_enabled", 0);
@@ -230,12 +231,13 @@ public int Menu2_Callback(Menu menu2, MenuAction action, int client, int positio
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu gravity açtı!", client);
 				SetCvar("sv_gravity", 350);
 			}
-			if (GetConVarInt(FindConVar("sv_gravity")) != 800)
+			else if (GetConVarInt(FindConVar("sv_gravity")) != 800)
 			{
 				PrintToChatAll("[SM] \x10%N \x01adlı oyuncu gravity kapattı!", client);
 				SetCvar("sv_gravity", 800);
 			}
 		}
+		Menu_Ayarlar().Display(client, MENU_TIME_FOREVER);
 	}
 	else if (action == MenuAction_End)
 	{
@@ -243,7 +245,7 @@ public int Menu2_Callback(Menu menu2, MenuAction action, int client, int positio
 	}
 	else if (action == MenuAction_Cancel)
 	{
-		if (client == MenuCancel_ExitBack)
+		if (position == MenuCancel_ExitBack)
 			Menu_CTMenu().Display(client, MENU_TIME_FOREVER);
 	}
 }
@@ -274,6 +276,7 @@ public int Menu3_Callback(Menu menu3, MenuAction action, int client, int positio
 				if (IsValidClient(x) && GetClientTeam(x) == CS_TEAM_CT && !IsPlayerAlive(x))
 					CS_RespawnPlayer(x);
 			}
+			Menu_Revmenu().Display(client, MENU_TIME_FOREVER);
 		}
 		else if (strcmp(Item, "2") == 0)
 		{
@@ -283,6 +286,7 @@ public int Menu3_Callback(Menu menu3, MenuAction action, int client, int positio
 				if (IsValidClient(x) && GetClientTeam(x) == CS_TEAM_T && !IsPlayerAlive(x))
 					CS_RespawnPlayer(x);
 			}
+			Menu_Revmenu().Display(client, MENU_TIME_FOREVER);
 		}
 		else if (strcmp(Item, "3") == 0)
 		{
@@ -295,7 +299,7 @@ public int Menu3_Callback(Menu menu3, MenuAction action, int client, int positio
 	}
 	else if (action == MenuAction_Cancel)
 	{
-		if (client == MenuCancel_ExitBack)
+		if (position == MenuCancel_ExitBack)
 			Menu_CTMenu().Display(client, MENU_TIME_FOREVER);
 	}
 }
@@ -347,7 +351,7 @@ public int Menu3a_Callback(Menu menu3a, MenuAction action, int client, int posit
 	}
 	else if (action == MenuAction_Cancel)
 	{
-		if (client == MenuCancel_ExitBack)
+		if (position == MenuCancel_ExitBack)
 			Menu_Revmenu().Display(client, MENU_TIME_FOREVER);
 	}
 }
@@ -376,12 +380,15 @@ public int Menu4_Callback(Menu menu4, MenuAction action, int client, int positio
 		{
 			PrintToChatAll("[SM] \x10%N \x01adlı oyuncu Aref oynunu başlattı!", client);
 			sure = 10;
-			CreateTimer(1.0, Sureeksilt, _, TIMER_FLAG_NO_MAPCHANGE | TIMER_REPEAT);
+			if (h_timer != null)
+				delete h_timer;
+			h_timer = CreateTimer(1.0, Sureeksilt, _, TIMER_FLAG_NO_MAPCHANGE | TIMER_REPEAT);
 			for (int x = 1; x <= MaxClients; x++)
 			{
 				if (IsValidClient(x) && GetClientTeam(x) == CS_TEAM_T && IsPlayerAlive(x))
 				{
-					SetEntityRenderMode(x, RENDER_TRANSALPHA);
+					SDKHook(x, SDKHook_SetTransmit, SetTransmit);
+					SetEntityRenderMode(x, RENDER_TRANSALPHAADD);
 					SetEntityRenderColor(x, 255, 255, 255, 0);
 					ClearWeapon(x);
 					GivePlayerItem(x, "weapon_deagle");
@@ -392,6 +399,7 @@ public int Menu4_Callback(Menu menu4, MenuAction action, int client, int positio
 		else if (strcmp(Item, "2") == 0)
 		{
 			PrintToChatAll("[SM] \x10%N \x01adlı oyuncu KamiKz oynunu başlattı!", client);
+			Eskisi = FindConVar("sv_airaccelerate").IntValue;
 			SetCvar("sv_airaccelerate", -50);
 			SetCvar("sm_parachute_enabled", 0);
 		}
@@ -438,7 +446,9 @@ public int Menu4_Callback(Menu menu4, MenuAction action, int client, int positio
 			PrintToChatAll("[SM] \x10%N \x01adlı oyuncu Zeus oynunu başlattı!", client);
 			SetCvar("sv_infinite_ammo", 1);
 			sure = 10;
-			CreateTimer(1.0, Sureeksilt, _, TIMER_FLAG_NO_MAPCHANGE | TIMER_REPEAT);
+			if (h_timer != null)
+				delete h_timer;
+			h_timer = CreateTimer(1.0, Sureeksilt, _, TIMER_FLAG_NO_MAPCHANGE | TIMER_REPEAT);
 			for (int x = 1; x <= MaxClients; x++)
 			{
 				if (IsValidClient(x) && IsPlayerAlive(x) && GetClientTeam(x) == CS_TEAM_T)
@@ -454,9 +464,22 @@ public int Menu4_Callback(Menu menu4, MenuAction action, int client, int positio
 	}
 	else if (action == MenuAction_Cancel)
 	{
-		if (client == MenuCancel_ExitBack)
+		if (position == MenuCancel_ExitBack)
 			Menu_CTMenu().Display(client, MENU_TIME_FOREVER);
 	}
+}
+
+public Action SetTransmit(int entity, int client)
+{
+	if (entity == client)return Plugin_Continue;
+	else if (entity != client)
+	{
+		if (GetClientTeam(client) == CS_TEAM_T && IsPlayerAlive(client))
+			return Plugin_Handled;
+		else if (GetClientTeam(client) == CS_TEAM_CT)
+			return Plugin_Continue;
+	}
+	return Plugin_Continue;
 }
 
 public Action Sureeksilt(Handle timer, any data)
@@ -464,13 +487,14 @@ public Action Sureeksilt(Handle timer, any data)
 	sure--;
 	if (sure > 0)
 	{
-		PrintCenterTextAll("→ %d Saniye sonra Oyun başlayacak ←", sure);
+		PrintHintTextToAll("→ %d Saniye sonra Oyun başlayacak ←", sure);
 	}
 	else
 	{
 		PrintToChatAll("[SM] \x01Oyun başladı!");
-		PrintCenterTextAll("→ Oyun Başladı ←");
+		PrintHintTextToAll("→ Oyun Başladı ←");
 		FFAyarla(true);
+		h_timer = null;
 		return Plugin_Stop;
 	}
 	return Plugin_Continue;
@@ -509,7 +533,7 @@ public Action Olduamk(Event event, const char[] name, bool dontBroadcast)
 				UnhookEvent("weapon_fire", Oitc_WeapnFire);
 				UnhookEvent("player_death", Oitc_PlayerDeath);
 			}
-			PrintCenterTextAll("→ Oyun sona erdi! ←");
+			PrintHintTextToAll("→ Oyun sona erdi! ←");
 			Ayarlariduzelt();
 		}
 	}

@@ -135,10 +135,13 @@ stock void Ayarlariduzelt()
 			SetEntityHealth(x, 100);
 			SetEntityRenderMode(x, RENDER_NORMAL);
 			SetEntProp(x, Prop_Data, "m_takedamage", 2, 1);
+			SDKUnhook(x, SDKHook_SetTransmit, SetTransmit);
 			if (GetClientTeam(x) == CS_TEAM_T)
 				ClearWeapon(x);
 		}
 	}
+	if (GetConVarInt(FindConVar("sv_airaccelerate")) == -50)
+		SetCvar("sv_airaccelerate", Eskisi);
 	Mahkumlarindurumu = false;
 	Oyunbasladi = false;
 	FFAyarla(false);
@@ -148,4 +151,9 @@ stock void Ayarlariduzelt()
 	SetCvar("mp_respawn_on_death_t", 0);
 	SetCvar("sv_infinite_ammo", 0);
 	SetCvar("sm_parachute_enabled", 1);
+	if (h_timer != null)
+	{
+		delete h_timer;
+		h_timer = null;
+	}
 } 
