@@ -1,4 +1,4 @@
-## is progress
+## Is progress
 
 ### Writing wiki
 - [x] Requirements

@@ -1,4 +1,4 @@
-## to do
+## To do
 
 ### Translation support
 ##### If there is no translation file, it will be created.
