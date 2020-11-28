@@ -8,3 +8,4 @@
 - [ ] CT kov
 - [ ] CT Menu
 - [ ] Warden time
+- [ ] Sut Ol

@@ -27,7 +27,7 @@
 - [ ] Warden marker (Komutçu marker)
 - [x] Circle (Daire)
 - [ ] Teamgames (Takım oyunları)
-- [ ] Sütol [Only Turkish]
+- [x] Sütol [Only Turkish]
 - [x] LR model remover (LR model kaldırma)
 - [x] CT kov [Only Turkish]
 - [x] Voice delay remover (Ses gecikmesi giderici)
