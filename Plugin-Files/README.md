@@ -15,3 +15,4 @@
 8. [Smart Jail Door](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Smart-jail-door)
 9. [CT Menu](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/CT-Menu)
 10. [Warden Time](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Warden-Time)
+11. [Sut Ol (Only TR)](https://github.com/SourcePawnX/CSGO-Jailbreak/tree/main/Plugin-Files/Sut-Ol)
