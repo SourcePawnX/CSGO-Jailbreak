@@ -18,7 +18,6 @@
 - [ ] Respawn [warden, ct]
 - [x] Warden time (Komdk, komutçu süresi)
 - [x] Chat games (CTsustum, Tsustum, Dsustum)
-- [ ] CT menu
 - [ ] Prop spawner (Model oluşturma)
 - [ ] FF things (FF işlemleri)
 - [ ] Freekill
